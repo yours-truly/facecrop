@@ -12,7 +12,7 @@ DESCRIPTION
 -----------
 
 Use `facecrop` to extract a face from a full-body frontal image. If multiple
-faces are detected only the largest one is used.
+faces are detected, the one closest to the top is used.
 
 OPTIONS
 -------

@@ -24,9 +24,9 @@ module.exports = function(src, opts, cb) {
           return cb(new Error('No faces found in ' + opts.i || 'stream'));
         }
 
-        // Get the largest area
+        // Get the topmost area
         var rect = faces.reduce(function(p, f) {
-          return f.width * f.height > p.width * p.height ? f : p;
+          return f.y < p.y ? f : p;
         });
 
         // Crop & resize
