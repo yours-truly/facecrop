@@ -2,6 +2,7 @@
   "name": "facecrop",
   "version": "1.0.0",
   "description": "Crop faces from images using OpenCV",
+  "repository": "yours-truly/facecrop",
   "bin": {
     "facecrop": "./bin/facecrop.js"
   },
