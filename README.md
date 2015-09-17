@@ -26,7 +26,7 @@ Sets the desired output image size. Defaults to `200x200`.
 * `--size <size>`  
 Shortcut for square images.
 
-* `--padding <percent>, -p <percent>`
+* `--padding <percent>`
 Add padding around the face. The amount is specified as percentage of the
 cropped regions width/height. Defaults to `40`.
 

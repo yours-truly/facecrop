@@ -64,8 +64,7 @@ function exit(msg) {
 
 crop(minimist(process.argv.slice(2), {
   alias: {
-    help: 'h',
-    padding: 'p'
+    help: 'h'
   },
   default: {
     size: '200x200',
