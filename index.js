@@ -9,8 +9,8 @@ module.exports = function(src, opts, cb) {
     new cv.ImageDataStream()
     .on('error', cb)
     .on('load', function(m) {
-      // If image is larger than 10MP scale it down first
-      var maxRes = 10000000;
+      // If image is larger than 8MP scale it down first
+      var maxRes = 8000000;
       if (m.size() > maxRes) {
         var s = maxRes / m.size();
         m.resize(m.width() * s, m.height() * s);
