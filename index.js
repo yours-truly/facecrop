@@ -9,14 +9,12 @@ module.exports = function(src, opts, cb) {
     new cv.ImageDataStream()
     .on('error', cb)
     .on('load', function(m) {
-
-      if (m.width() * m.height() > 1000000) {
-        // Image is to big, scale down first
-        var ratio = m.width() / m.height();
-        if (ratio > 1) m.resize(1000, 1000 * (1 / ratio));
-        else m.resize(~~(1000 * ratio), 1000);
+      // If image is larger than 10MP scale it down first
+      var maxRes = 10000000;
+      if (m.size() > maxRes) {
+        var s = maxRes / m.size();
+        m.resize(m.width() * s, m.height() * s);
       }
-
       m.detectObject(cv.FACE_CASCADE, {}, function(err, faces) {
         if (err) return cb(err);
 
