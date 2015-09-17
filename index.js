@@ -34,7 +34,7 @@ module.exports = function(src, opts, cb) {
         var cropped = crop(m, rect, size.width / size.height, opts.padding);
         cropped.resize(size.width, size.height);
 
-        if (opts.grayscale) cropped.convertGrayscale();
+        if (opts.grayscale && m.channels() > 1) cropped.convertGrayscale();
 
         cb(null, cropped.toBuffer(opts.outputParams));
       });
