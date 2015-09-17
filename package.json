@@ -1,6 +1,6 @@
 {
   "name": "facecrop",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Crop faces from images using OpenCV",
   "bin": {
     "facecrop": "./bin/facecrop.js"
